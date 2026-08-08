@@ -37,8 +37,13 @@ Measured out of the files, not copied from whatever drew them:
 | `BuzzDisc2.svg` | 150.0 × 40.0mm rectangle | two, 5mm | 25mm apart |
 
 In both, the holes straddle the centre and sit on the centreline — that symmetry is what
-lets the disc wind and unwind evenly instead of wobbling. Each file is one 495 × 279mm
-sheet. Every line is a cut; there is no engrave layer and nothing to map by colour.
+lets the disc wind and unwind evenly instead of wobbling. Each file is cropped to the part
+itself, so the sheet **is** the outline.
+
+**Colour is the cut order**, and everything is a cut — there is no engrave layer. Run
+**red first** for the two cord holes, while the part is still whole, then **black** for the
+outline, which frees it. Give both an explicit operation; a per-colour job silently skips
+any colour you leave unmapped.
 
 **The toothed disc is the buzzing one** — the teeth chopping the air are the sound. It is
 also heavier, so it stores more energy and runs longer between pulls. **The plain bar**
@@ -49,6 +54,11 @@ has no teeth and far less area: quieter, faster to spin up, and the easier first
 **Cut these in 3mm Baltic birch plywood** — what they are built in. The cord holes are
 where it fails, under real tension, so the void-free core of Baltic birch is worth the
 difference over a cheaper sheet.
+
+**Two or more laminations may sound better.** Cut the shape twice or three times and glue
+the copies face to face: more mass at the same radius stores more energy per wind and runs
+longer between pulls, and the teeth meet the air with a deeper edge. Line the cord holes up
+when you glue.
 
 **The cord is not in these files.** A continuous loop through both holes is the usual
 arrangement; length and thickness are yours to settle by trying.

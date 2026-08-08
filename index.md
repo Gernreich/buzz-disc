@@ -51,10 +51,21 @@ Measured out of the files themselves:
 and 12.5mm either side of it respectively. That symmetry is what lets the disc wind and
 unwind evenly instead of wobbling.
 
-Each file is one sheet, 495 × 279mm, with the part positioned on it. Output is
-millimetre-true — `1 user unit = 1 mm` with a physical `width`/`height` — so it prints
-and cuts at real size. Every line is a cut; there is no engrave layer and nothing to map
-by colour.
+Each file is cropped to the part itself, so the sheet **is** the outline — 160.5 × 160.7mm
+for the disc, 150 × 40mm for the bar. Output is millimetre-true — `1 user unit = 1 mm`
+with a physical `width`/`height` — so it prints and cuts at real size.
+
+### Colour is the cut order
+
+Everything is a cut; the colour says when. There is no engrave layer.
+
+| | Colour | What | Why then |
+|---|---|---|---|
+| 1 | **red `#ff0000`** | the two cord holes | while the part is still whole |
+| 2 | **black `#000000`** | the outline | frees the part, so it goes last |
+
+Give both an explicit operation. A per-colour job silently skips any colour you leave
+unmapped — leave red out and you get a disc with nothing to thread.
 
 ## What the two designs do differently
 
@@ -73,6 +84,13 @@ and the better first one to try.
 under real tension in use and the cord holes are where it fails: a ply that delaminates
 gives way there first, which is why Baltic birch and its void-free core is worth the
 difference over a cheaper sheet.
+
+**Two or more laminations may sound better.** Cut the same shape twice or three times and
+glue the copies face to face. A thicker disc carries more mass at the same radius, so it
+stores more energy per wind and runs longer between pulls — and the teeth present a
+deeper edge to the air. Worth trying before you decide the single-thickness version is
+what it sounds like. Line the cord holes up when you glue: they are what the whole thing
+turns on.
 
 **The cord is not in these files.** A continuous loop through both holes is the usual
 arrangement; length and thickness are yours to settle by trying.

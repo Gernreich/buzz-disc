@@ -41,9 +41,13 @@ lets the disc wind and unwind evenly instead of wobbling. Each file is cropped t
 itself, so the sheet **is** the outline.
 
 **Colour is the cut order**, and everything is a cut — there is no engrave layer. Run
-**red first** for the two cord holes, while the part is still whole, then **black** for the
-outline, which frees it. Give both an explicit operation; a per-colour job silently skips
-any colour you leave unmapped.
+**green first** for the two cord holes, while the part is still whole, then **black** for
+the outline, which frees it. Give both an explicit operation; a per-colour job silently
+skips any colour you leave unmapped.
+
+The full sequence is shared by every LaserMadeMusic repository — blue engraves, then
+green → orange → cyan → black, with black always the cut that frees the part. These two
+designs need only the first and last of those.
 
 **The toothed disc is the buzzing one** — the teeth chopping the air are the sound. It is
 also heavier, so it stores more energy and runs longer between pulls. **The plain bar**

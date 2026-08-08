@@ -69,10 +69,10 @@ and the better first one to try.
 
 ## Before you cut
 
-**Material and thickness are yours to choose, and nothing here has been validated
-against cut stock.** The disc is under real tension in use and the cord holes are where
-it will fail — a hole close to an edge, or a thin ply that delaminates, gives way there
-first.
+**Cut these in 3mm Baltic birch plywood** — that is what they are built in. The disc is
+under real tension in use and the cord holes are where it fails: a ply that delaminates
+gives way there first, which is why Baltic birch and its void-free core is worth the
+difference over a cheaper sheet.
 
 **The cord is not in these files.** A continuous loop through both holes is the usual
 arrangement; length and thickness are yours to settle by trying.

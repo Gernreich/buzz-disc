@@ -46,9 +46,9 @@ has no teeth and far less area: quieter, faster to spin up, and the easier first
 
 ## Before you cut
 
-**Material and thickness are yours, and nothing here has been validated against cut
-stock.** The cord holes are where it fails — a thin ply that delaminates gives way there
-first, under real tension.
+**Cut these in 3mm Baltic birch plywood** — what they are built in. The cord holes are
+where it fails, under real tension, so the void-free core of Baltic birch is worth the
+difference over a cheaper sheet.
 
 **The cord is not in these files.** A continuous loop through both holes is the usual
 arrangement; length and thickness are yours to settle by trying.

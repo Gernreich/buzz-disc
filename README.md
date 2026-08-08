@@ -63,7 +63,22 @@ when you glue.
 **The cord is not in these files.** A continuous loop through both holes is the usual
 arrangement; length and thickness are yours to settle by trying.
 
-**Mind the teeth** — a 160mm toothed disc spinning on a cord loop is sharp and moving.
+## Handle it with care
+
+**This one spins close to you** — held between two hands at chest height, with your face
+above it — and the lamination advice above deliberately makes it heavier.
+
+- **Mass.** The toothed disc is at most about **41g** at one 3mm thickness, **83g**
+  laminated twice, **124g** three times. (The teeth remove material, so those are upper
+  bounds.)
+- **Speed.** A wound cord releases fast, and the rim travels far quicker than the centre.
+  The rim is where all the teeth are.
+- **Shape.** The toothed rim is the whole point of the design and a ring of points at
+  speed. It does not have to be sharp to catch skin.
+
+Keep it **clear of your face**, and check both holes and the loop before each session —
+especially on a laminated disc, where the glue line runs straight through them. The plain
+bar has no teeth and far less area: it is the gentler one to learn the motion with.
 
 ## Files
 

@@ -95,8 +95,27 @@ turns on.
 **The cord is not in these files.** A continuous loop through both holes is the usual
 arrangement; length and thickness are yours to settle by trying.
 
-**Mind the teeth.** A 160mm toothed disc spinning fast at the end of a cord loop is
-sharp and moving; keep it away from faces.
+## Handle it with care
+
+**Unlike a bullroarer, this one spins close to you** — held between two hands, roughly at
+chest height, with your face above it. Mass, speed and shape all matter, and the
+lamination advice above makes the first of them worse on purpose.
+
+**Mass.** The toothed disc is at most about **41g** in a single 3mm thickness, **83g**
+laminated twice and **124g** three times (Baltic birch near 680 kg/m³; the teeth remove
+material, so treat those as upper bounds). That is a meaningful weight spinning a hand's
+width from your fingers.
+
+**Speed.** A wound cord releases quickly, and the rim of a 160mm disc travels far faster
+than its centre. That rim is where all the teeth are.
+
+**Shape.** The toothed rim is the whole point of the design — it is what makes the buzz —
+and it is a ring of points turning at speed. It does not have to be sharp to catch skin.
+
+So: **keep it clear of your face**, and be aware the disc can come off the cord if a hole
+tears or a knot slips. Check both holes and the loop before each session, especially on a
+laminated disc where the glue line runs right through them. The plain bar has no teeth and
+far less area — it is the gentler one to learn the motion with.
 
 ## Files
 

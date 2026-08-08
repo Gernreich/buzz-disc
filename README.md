@@ -5,6 +5,8 @@ and unwinds as you pull, spinning the disc back and forth. A toothed rim turns t
 into a buzz. Output is millimetre-true — `1 user unit = 1 mm` with a physical
 `width`/`height` — so it prints and cuts at real size.
 
+**[Read the writeup](https://gernreich.github.io/buzz-disc/)**
+
 <table>
 <tr>
 <td align="center"><a href="BuzzDisc1.svg"><img src="previews/BuzzDisc1.svg" alt="A round buzz disc about 160mm across with a sawtooth rim and two cord holes at the centre" width="180"></a></td>
@@ -19,8 +21,6 @@ into a buzz. Output is millimetre-true — `1 user unit = 1 mm` with a physical
 *Click one to download its cut file. Each is at its own scale, so read the sizes rather
 than the pictures. These are display renderings — the cut files draw a hairline on no
 background, which a browser shows almost invisibly.*
-
-**[Read the writeup](https://gernreich.github.io/buzz-disc/)**
 
 Built for **[LaserMadeMusic](https://www.youtube.com/@LaserMadeMusic)**, where the
 cutting and the spinning are shown.

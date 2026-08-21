@@ -25,6 +25,9 @@ background, which a browser shows almost invisibly.*
 Built for **[LaserMadeMusic](https://www.youtube.com/@LaserMadeMusic)**, where the
 cutting and the spinning are shown.
 
+**[The rest of the build files](https://gernreich.github.io/)** — every instrument,
+generator and tool, indexed.
+
 **[Download everything as a ZIP](https://github.com/Gernreich/buzz-disc/archive/refs/heads/main.zip)** — both designs.
 
 ## What is in each file

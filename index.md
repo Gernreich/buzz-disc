@@ -18,6 +18,9 @@ Two designs, both cut-ready, both with a pair of 5mm cord holes.
 Released under CC0 1.0 — do what you like with them, no attribution needed. Built for
 **[LaserMadeMusic](https://www.youtube.com/@LaserMadeMusic)**.
 
+**[The rest of the build files](https://gernreich.github.io/)** — every instrument,
+generator and tool, indexed.
+
 ## The two designs
 
 Click either to download the cut file. The pictures are display renderings — the cut

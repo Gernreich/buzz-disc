@@ -87,6 +87,27 @@ Keep it **clear of your face**, and check both holes and the loop before each se
 especially on a laminated disc, where the glue line runs straight through them. The plain
 bar has no teeth and far less area: it is the gentler one to learn the motion with.
 
+## Checking the files
+
+Both designs are gated by **`flat-part-check.py`** in
+[lasermade-tools](https://github.com/Gernreich/lasermade-tools), which measures the
+geometry rather than reading the drawing — millimetre-true units, bed fit, closed cuts,
+the palette and its cut order, and the material left around every hole:
+
+```sh
+python3 ../lasermade-tools/flat-part-check.py --dir .
+```
+
+Both pass: **18 checks, 0 failed**, with 5mm cord holes and 25.0mm (disc) and 17.5mm (bar)
+of material between a hole and the nearest edge — no margin worth worrying about here, and
+the glue line through the holes on a laminated disc matters more than the geometry does.
+`.github/workflows/check.yml` runs the same command on every push.
+
+`BuzzDisc1.svg` is the file that taught the gate two of its own bugs: its outline closes
+without a `z`, ends meeting to 0.00009mm, and it starts at 3 o'clock — exactly the height
+of both cord holes, which is the degenerate case for a point-in-polygon test. The tool's
+README tells that story.
+
 ## Files
 
 | | |
@@ -94,5 +115,6 @@ bar has no teeth and far less area: it is the gentler one to learn the motion wi
 | `BuzzDisc1.svg` · `BuzzDisc2.svg` | the two cut-ready designs |
 | `previews/` | display renderings — **not** cut files |
 | `index.md` · `index.html` | the published page; the markdown is the source |
+| `.github/workflows/check.yml` | runs the pre-cut gate on every push |
 
 Released under [CC0 1.0](LICENSE).

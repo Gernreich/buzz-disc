@@ -5,7 +5,6 @@ and unwinds as you pull, spinning the disc back and forth. A toothed rim turns t
 into a buzz. Output is millimetre-true — `1 user unit = 1 mm` with a physical
 `width`/`height` — so it prints and cuts at real size.
 
-<!-- readme-only -->
 **[Read the writeup](https://gernreich.github.io/buzz-disc/)**
 
 <table>

@@ -1,5 +1,14 @@
 # Buzz disc — two designs
 
+> **This is a dangerous object. It can injure you, and it can injure anyone
+> near you.** Unlike a bullroarer this one spins close in — held between two
+> hands, roughly at chest height, with your face above it. The toothed disc is
+> at most about 41g in a single 3mm thickness and 124g laminated three times,
+> and its rim is a ring of points turning at speed. It can also come off the
+> cord if a hole tears or a knot slips. Keep it clear of your face, check both
+> holes and the loop before each session, and read
+> [Handle it with care](#handle-it-with-care) first.
+
 A buzz disc is a flat piece threaded on a loop of cord that passes through two holes
 near its centre. Wind the loop up by swinging the disc, then pull and release the ends
 rhythmically: the cord unwinds, spins the disc, winds up the other way, and the disc

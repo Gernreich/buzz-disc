@@ -58,8 +58,9 @@ the outline, which frees it. Give both an explicit operation; a per-colour job s
 skips any colour you leave unmapped.
 
 The full sequence is shared by every LaserMadeMusic repository — blue engraves, then
-green → orange → cyan → black, with black always the cut that frees the part. These two
-designs need only the first and last of those.
+green → orange → cyan → black, with black always the cut that frees the part. There is
+no engrave layer here, so these two designs use only two of the four cut stages: green,
+then black.
 
 **The toothed disc is the buzzing one** — the teeth chopping the air are the sound. It is
 also heavier, so it stores more energy and runs longer between pulls. **The plain bar**

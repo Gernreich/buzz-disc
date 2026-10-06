@@ -1,5 +1,7 @@
 # Buzz disc — two designs
 
+**[Read the README](https://github.com/Gernreich/buzz-disc)**
+
 > **This is a dangerous object. It can injure you, and it can injure anyone
 > near you.** Unlike a bullroarer this one spins close in — held between two
 > hands, roughly at chest height, with your face above it. The toothed disc is

@@ -2,6 +2,8 @@
 
 **[Read the README](https://github.com/Gernreich/buzz-disc)**
 
+**[Turn it in 3D](https://gernreich.github.io/buzz-disc/buzz-disc-3d.html)**
+
 > **This is a dangerous object. It can injure you, and it can injure anyone
 > near you.** Unlike a bullroarer this one spins close in — held between two
 > hands, roughly at chest height, with your face above it. The toothed disc is
@@ -137,4 +139,7 @@ far less area — it is the gentler one to learn the motion with.
 |---|---|
 | `BuzzDisc1.svg` · `BuzzDisc2.svg` | the two cut-ready designs |
 | `previews/` | display renderings — **not** cut files |
+| `buzz-disc-3d.html` | the 3D view, assembled from the cut files — drag to turn |
+| `viewer.py` | builds `buzz-disc-3d.html` from the cut files, with the turn3d module in lasermade-tools |
+| `.repro` | how every shipped drawing and page is reproduced |
 | `index.md` · `index.html` | this page; the markdown is the source |

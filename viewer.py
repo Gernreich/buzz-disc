@@ -54,7 +54,9 @@ def main(argv):
     o = [a.split('=', 1)[1] for a in argv if a.startswith('--out=')]
     path = o[0] if o else os.path.join(HERE, 'buzz-disc-3d.html')
     t.write(path, 'Buzz disc', build(),
-            'Drag to turn, scroll or pinch to zoom; pick a disc above. Each is its cut file’s own '
+            'Drag to turn; right-drag, shift-drag or move two fingers to slide the view; '
+            'scroll or pinch to zoom in on whatever is under the pointer; double-click a part '
+            'to turn round it, and Reset view to go back. Pick a disc above. Each is its cut file’s own '
             'outline at 3mm, stood on edge with the cord loop through its two centre holes and out to a '
             'hand at each side. Wind it up, pull the hands apart, and the cord unwinding spins the disc '
             'about it: tick Spin it to see which way.', 'buzz-disc/viewer.py', spin=True)

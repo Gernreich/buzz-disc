@@ -1,5 +1,7 @@
 # Buzz disc
 
+**[← All projects](https://gernreich.github.io/)**
+
 **[Read the writeup](https://gernreich.github.io/buzz-disc/)**
 
 **[Turn it in 3D](https://gernreich.github.io/buzz-disc/buzz-disc-3d.html)**
@@ -36,7 +38,7 @@ background, which a browser shows almost invisibly.*
 Built for **[LaserMadeMusic](https://www.youtube.com/@LaserMadeMusic)**, where the
 cutting and the spinning are shown.
 
-**[The rest of the build files](https://gernreich.github.io/)** — every instrument,
+**[The rest of the build files](https://gernreich.github.io/lasermademusic.html)** — every instrument,
 generator and tool, indexed.
 
 **[Download everything as a ZIP](https://github.com/Gernreich/buzz-disc/archive/refs/heads/main.zip)** — both designs.

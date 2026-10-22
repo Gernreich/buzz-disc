@@ -1,5 +1,7 @@
 # Buzz disc — two designs
 
+**[← All projects](https://gernreich.github.io/)**
+
 **[Read the README](https://github.com/Gernreich/buzz-disc)**
 
 **[Turn it in 3D](https://gernreich.github.io/buzz-disc/buzz-disc-3d.html)**
@@ -31,7 +33,7 @@ Two designs, both cut-ready, both with a pair of 5mm cord holes.
 Released under CC0 1.0 — do what you like with them, no attribution needed. Built for
 **[LaserMadeMusic](https://www.youtube.com/@LaserMadeMusic)**.
 
-**[The rest of the build files](https://gernreich.github.io/)** — every instrument,
+**[The rest of the build files](https://gernreich.github.io/lasermademusic.html)** — every instrument,
 generator and tool, indexed.
 
 ## The two designs

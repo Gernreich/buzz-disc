@@ -6,6 +6,8 @@
 
 **[Turn it in 3D](https://gernreich.github.io/buzz-disc/buzz-disc-3d.html)**
 
+<iframe src="buzz-disc-3d.html" title="The buzz discs as solid parts you can drag to turn, each its cut file's own outline stood on edge with the cord loop through its centre holes, with a button for each disc and a box to spin it" style="width:100%;height:560px;border:0"></iframe>
+
 > **This is a dangerous object. It can injure you, and it can injure anyone
 > near you.** Unlike a bullroarer this one spins close in — held between two
 > hands, roughly at chest height, with your face above it. The toothed disc is

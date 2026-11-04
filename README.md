@@ -135,3 +135,7 @@ README tells that story.
 | `.github/workflows/check.yml` | runs the pre-cut gate on every push |
 
 Released under [CC0 1.0](LICENSE).
+
+## Credits
+
+Made by Michael Gernreich with [Claude](https://www.anthropic.com/claude) (Anthropic), working in Claude Code, which co-wrote the code and the documentation. Commits Claude made carry a `Co-Authored-By: Claude` line.

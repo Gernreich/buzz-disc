@@ -11,7 +11,7 @@
 > **This is a dangerous object. It can injure you, and it can injure anyone
 > near you.** Unlike a bullroarer this one spins close in — held between two
 > hands, roughly at chest height, with your face above it. The toothed disc is
-> at most about 41g in a single 3mm thickness and 124g laminated three times,
+> at most about 41g in a single 3 mm thickness and 124g laminated three times,
 > and its rim is a ring of points turning at speed. It can also come off the
 > cord if a hole tears or a knot slips. Keep it clear of your face, check both
 > holes and the loop before each session, and read
@@ -22,7 +22,7 @@ near its centre. Wind the loop up by swinging the disc, then pull and release th
 rhythmically: the cord unwinds, spins the disc, winds up the other way, and the disc
 whirrs back and forth. A toothed rim turns that whirr into a buzz.
 
-Two designs, both cut-ready, both with a pair of 5mm cord holes.
+Two designs, both cut-ready, both with a pair of 5 mm cord holes.
 
 ## Get the files
 
@@ -47,12 +47,12 @@ so these are thickened and painted onto a light ground and cropped to the part. 
 <div class="tw">
 <table>
 <tr>
-<td align="center"><a href="BuzzDisc1.svg"><img src="previews/BuzzDisc1.svg" alt="A round buzz disc about 160mm across with a sawtooth rim of triangular teeth and two small cord holes at the centre" width="180"></a></td>
-<td align="center"><a href="BuzzDisc2.svg"><img src="previews/BuzzDisc2.svg" alt="A plain rectangular buzz disc, 150 by 40mm, with two cord holes at the centre" width="180"></a></td>
+<td align="center"><a href="BuzzDisc1.svg"><img src="previews/BuzzDisc1.svg" alt="A round buzz disc about 160 mm across with a sawtooth rim of triangular teeth and two small cord holes at the centre" width="180"></a></td>
+<td align="center"><a href="BuzzDisc2.svg"><img src="previews/BuzzDisc2.svg" alt="A plain rectangular buzz disc, 150 by 40 mm, with two cord holes at the centre" width="180"></a></td>
 </tr>
 <tr>
-<td align="center"><sub>Toothed disc · 160 × 161mm</sub></td>
-<td align="center"><sub>Plain bar · 150 × 40mm</sub></td>
+<td align="center"><sub>Toothed disc · 160 × 161 mm</sub></td>
+<td align="center"><sub>Plain bar · 150 × 40 mm</sub></td>
 </tr>
 </table>
 </div>
@@ -63,15 +63,15 @@ Measured out of the files themselves:
 
 | Design | Outline | Cord holes | Spacing, centre to centre |
 |---|---|---|---|
-| `BuzzDisc1.svg` | 160.5 × 160.7mm, sawtooth rim | two, 5mm | 30mm |
-| `BuzzDisc2.svg` | 150.0 × 40.0mm rectangle | two, 5mm | 25mm |
+| `BuzzDisc1.svg` | 160.5 × 160.7 mm, sawtooth rim | two, 5 mm | 30 mm |
+| `BuzzDisc2.svg` | 150.0 × 40.0 mm rectangle | two, 5 mm | 25 mm |
 
-**In both, the pair of holes straddles the centre and sits on the centreline** — 15mm
-and 12.5mm either side of it respectively. That symmetry is what lets the disc wind and
+**In both, the pair of holes straddles the centre and sits on the centreline** — 15 mm
+and 12.5 mm either side of it respectively. That symmetry is what lets the disc wind and
 unwind evenly instead of wobbling.
 
-Each file is cropped to the part itself, so the sheet **is** the outline — 160.5 × 160.7mm
-for the disc, 150 × 40mm for the bar. Output is millimetre-true — `1 user unit = 1 mm`
+Each file is cropped to the part itself, so the sheet **is** the outline — 160.5 × 160.7 mm
+for the disc, 150 × 40 mm for the bar. Output is millimetre-true — `1 user unit = 1 mm`
 with a physical `width`/`height` — so it prints and cuts at real size.
 
 ### Colour is the cut order
@@ -100,7 +100,7 @@ and the better first one to try.
 
 ## Before you cut
 
-**Cut these in 3mm Baltic birch plywood** — that is what they are built in. The disc is
+**Cut these in 3 mm Baltic birch plywood** — that is what they are built in. The disc is
 under real tension in use and the cord holes are where it fails: a ply that delaminates
 gives way there first, which is why Baltic birch and its void-free core is worth the
 difference over a cheaper sheet.
@@ -121,12 +121,12 @@ arrangement; length and thickness are yours to settle by trying.
 chest height, with your face above it. Mass, speed and shape all matter, and the
 lamination advice above makes the first of them worse on purpose.
 
-**Mass.** The toothed disc is at most about **41g** in a single 3mm thickness, **83g**
+**Mass.** The toothed disc is at most about **41g** in a single 3 mm thickness, **83g**
 laminated twice and **124g** three times (Baltic birch near 680 kg/m³; the teeth remove
 material, so treat those as upper bounds). That is a meaningful weight spinning a hand's
 width from your fingers.
 
-**Speed.** A wound cord releases quickly, and the rim of a 160mm disc travels far faster
+**Speed.** A wound cord releases quickly, and the rim of a 160 mm disc travels far faster
 than its centre. That rim is where all the teeth are.
 
 **Shape.** The toothed rim is the whole point of the design — it is what makes the buzz —

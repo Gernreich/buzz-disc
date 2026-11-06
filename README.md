@@ -9,7 +9,7 @@
 > **This is a dangerous object. It can injure you, and it can injure anyone
 > near you.** Unlike a bullroarer this one spins close in — held between two
 > hands, roughly at chest height, with your face above it. The toothed disc is
-> at most about 41g in a single 3mm thickness and 124g laminated three times,
+> at most about 41g in a single 3 mm thickness and 124g laminated three times,
 > and its rim is a ring of points turning at speed. It can also come off the
 > cord if a hole tears or a knot slips. Keep it clear of your face, check both
 > holes and the loop before each session, and read
@@ -22,12 +22,12 @@ into a buzz. Output is millimetre-true — `1 user unit = 1 mm` with a physical
 
 <table>
 <tr>
-<td align="center"><a href="BuzzDisc1.svg"><img src="previews/BuzzDisc1.svg" alt="A round buzz disc about 160mm across with a sawtooth rim and two cord holes at the centre" width="180"></a></td>
-<td align="center"><a href="BuzzDisc2.svg"><img src="previews/BuzzDisc2.svg" alt="A plain rectangular buzz disc, 150 by 40mm, with two cord holes at the centre" width="180"></a></td>
+<td align="center"><a href="BuzzDisc1.svg"><img src="previews/BuzzDisc1.svg" alt="A round buzz disc about 160 mm across with a sawtooth rim and two cord holes at the centre" width="180"></a></td>
+<td align="center"><a href="BuzzDisc2.svg"><img src="previews/BuzzDisc2.svg" alt="A plain rectangular buzz disc, 150 by 40 mm, with two cord holes at the centre" width="180"></a></td>
 </tr>
 <tr>
-<td align="center"><sub>Toothed disc · 160 × 161mm</sub></td>
-<td align="center"><sub>Plain bar · 150 × 40mm</sub></td>
+<td align="center"><sub>Toothed disc · 160 × 161 mm</sub></td>
+<td align="center"><sub>Plain bar · 150 × 40 mm</sub></td>
 </tr>
 </table>
 
@@ -49,8 +49,8 @@ Measured out of the files, not copied from whatever drew them:
 
 | Design | Outline | Cord holes | Spacing |
 |---|---|---|---|
-| `BuzzDisc1.svg` | 160.5 × 160.7mm, sawtooth rim | two, 5mm | 30mm apart |
-| `BuzzDisc2.svg` | 150.0 × 40.0mm rectangle | two, 5mm | 25mm apart |
+| `BuzzDisc1.svg` | 160.5 × 160.7 mm, sawtooth rim | two, 5 mm | 30 mm apart |
+| `BuzzDisc2.svg` | 150.0 × 40.0 mm rectangle | two, 5 mm | 25 mm apart |
 
 In both, the holes straddle the centre and sit on the centreline — that symmetry is what
 lets the disc wind and unwind evenly instead of wobbling. Each file is cropped to the part
@@ -72,7 +72,7 @@ has no teeth and far less area: quieter, faster to spin up, and the easier first
 
 ## Before you cut
 
-**Cut these in 3mm Baltic birch plywood** — what they are built in. The cord holes are
+**Cut these in 3 mm Baltic birch plywood** — what they are built in. The cord holes are
 where it fails, under real tension, so the void-free core of Baltic birch is worth the
 difference over a cheaper sheet.
 
@@ -89,7 +89,7 @@ arrangement; length and thickness are yours to settle by trying.
 **This one spins close to you** — held between two hands at chest height, with your face
 above it — and the lamination advice above deliberately makes it heavier.
 
-- **Mass.** The toothed disc is at most about **41g** at one 3mm thickness, **83g**
+- **Mass.** The toothed disc is at most about **41g** at one 3 mm thickness, **83g**
   laminated twice, **124g** three times. (The teeth remove material, so those are upper
   bounds.)
 - **Speed.** A wound cord releases fast, and the rim travels far quicker than the centre.
@@ -112,13 +112,13 @@ the palette and its cut order, and the material left around every hole:
 python3 ../lasermade-tools/flat-part-check.py --dir .
 ```
 
-Both pass: **18 checks, 0 failed**, with 5mm cord holes and 25.0mm (disc) and 17.5mm (bar)
+Both pass: **18 checks, 0 failed**, with 5 mm cord holes and 25.0 mm (disc) and 17.5 mm (bar)
 of material between a hole and the nearest edge — no margin worth worrying about here, and
 the glue line through the holes on a laminated disc matters more than the geometry does.
 `.github/workflows/check.yml` runs the same command on every push.
 
 `BuzzDisc1.svg` is the file that taught the gate two of its own bugs: its outline closes
-without a `z`, ends meeting to 0.00009mm, and it starts at 3 o'clock — exactly the height
+without a `z`, ends meeting to 0.00009 mm, and it starts at 3 o'clock — exactly the height
 of both cord holes, which is the degenerate case for a point-in-polygon test. The tool's
 README tells that story.
 

@@ -3,7 +3,7 @@
 
     python3 viewer.py [--out=buzz-disc-3d.html]
 
-Each disc is its cut file's own outline at 3mm, read by
+Each disc is its cut file's own outline at 3 mm, read by
 lasermade-tools/turn3d.py, stood on edge with a cord loop threaded through its
 two centre holes and running out to a hand at each side. Pulling the hands
 apart unwinds the twisted cord and spins the disc about it, so "Spin it" turns
@@ -57,7 +57,7 @@ def main(argv):
             'Drag to turn; right-drag, shift-drag or move two fingers to slide the view; '
             'scroll or pinch to zoom in on whatever is under the pointer; double-click a part '
             'to turn round it, and Reset view to go back. Pick a disc above. Each is its cut file’s own '
-            'outline at 3mm, stood on edge with the cord loop through its two centre holes and out to a '
+            'outline at 3 mm, stood on edge with the cord loop through its two centre holes and out to a '
             'hand at each side. Wind it up, pull the hands apart, and the cord unwinding spins the disc '
             'about it: tick Spin it to see which way.', 'buzz-disc/viewer.py', spin=True)
     print(f'  wrote {os.path.relpath(path)}')

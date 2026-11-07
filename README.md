@@ -103,13 +103,13 @@ bar has no teeth and far less area: it is the gentler one to learn the motion wi
 
 ## Checking the files
 
-Both designs are gated by **`flat-part-check.py`** in
+Both designs are gated by **`flat-part-check`** in
 [lasermade-tools](https://github.com/Gernreich/lasermade-tools), which measures the
 geometry rather than reading the drawing — millimetre-true units, bed fit, closed cuts,
 the palette and its cut order, and the material left around every hole:
 
 ```sh
-python3 ../lasermade-tools/flat-part-check.py --dir .
+../lasermade-tools/target/release/flat-part-check --dir .
 ```
 
 Both pass: **18 checks, 0 failed**, with 5 mm cord holes and 25.0 mm (disc) and 17.5 mm (bar)

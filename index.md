@@ -144,7 +144,8 @@ far less area — it is the gentler one to learn the motion with.
 | `BuzzDisc1.svg` · `BuzzDisc2.svg` | the two cut-ready designs |
 | `previews/` | display renderings — **not** cut files |
 | `buzz-disc-3d.html` | the 3D view, assembled from the cut files — drag to turn |
-| `viewer.py` | builds `buzz-disc-3d.html` from the cut files, with the turn3d module in lasermade-tools |
+| `viewer.rs` | builds `buzz-disc-3d.html` from the cut files, with the turn3d module in lasermade-tools: `cargo build --release`, then `target/release/viewer` |
+| `Cargo.toml` · `Cargo.lock` | the Rust package for `viewer.rs`; it expects the lasermade-tools checkout beside this one |
 | `.repro` | how every shipped drawing and page is reproduced |
 | `index.md` · `index.html` | this page; the markdown is the source |
 

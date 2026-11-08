@@ -17,3 +17,8 @@ previews/BuzzDisc2.svg :: ../lasermade-tools/target/release/make-preview BuzzDis
 # --- the pages ---
 index.html :: ../lasermade-tools/target/release/md2html index.md $OUT
 buzz-disc-3d.html :: target/release/viewer --out=$OUT
+
+# --- the STEP files: the 3D view's parts as solids for a CAD program, one
+# file per design, written from the page by lasermade-tools' step-export ---
+step/buzz-disc-sawtooth-disc.step :: ../lasermade-tools/target/release/step-export buzz-disc-3d.html --name=buzz-disc --out=$(dirname $OUT)
+step/buzz-disc-plain-bar.step :: ../lasermade-tools/target/release/step-export buzz-disc-3d.html --name=buzz-disc --out=$(dirname $OUT)

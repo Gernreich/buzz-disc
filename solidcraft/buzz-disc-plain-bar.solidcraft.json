@@ -1,0 +1,16 @@
+{"commands":[
+{"command":"parameters.add","params":{"name":"ply","expression":"3 mm","comment":"the ply: one lamination"}},
+{"command":"parameters.add","params":{"name":"laminations","expression":"1","unit":"","comment":"discs glued face to face: the design's thickness is laminations × ply"}},
+{"command":"parameters.add","params":{"name":"length","expression":"150 mm","comment":"the bar, end to end"}},
+{"command":"parameters.add","params":{"name":"width","expression":"40 mm","comment":"the bar, across"}},
+{"command":"parameters.add","params":{"name":"hole_d","expression":"5 mm","comment":"a cord hole"}},
+{"command":"parameters.add","params":{"name":"hole_gap","expression":"25 mm","comment":"cord hole centre to centre"}},
+{"command":"parameters.add","params":{"name":"thick","expression":"laminations*ply","comment":"read only: the disc's thickness"}},
+{"command":"sketch.create","params":{"plane":"XY","name":"buzz disc plain bar sketch"}},
+{"command":"sketch.rectangle.two_point","params":{"p0":["-length/2","-width/2"],"p1":["length/2","width/2"]}},
+{"command":"sketch.circle.center","params":{"center":["-hole_gap/2","0 mm"],"diameter":"hole_d"}},
+{"command":"sketch.circle.center","params":{"center":["hole_gap/2","0 mm"],"diameter":"hole_d"}},
+{"command":"sketch.finish","params":{}},
+{"command":"solid.extrude","params":{"sketch":"buzz disc plain bar sketch","distance":"thick","operation":"new","name":"buzz disc plain bar","body_name":"buzz disc plain bar"}},
+{"command":"inspect.measure","params":{}}
+]}

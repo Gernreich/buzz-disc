@@ -1,14 +1,16 @@
 # How every shipped SVG and page in this repository is drawn. Checked by
 # lasermade-tools' repro-svg; $OUT is where the file must be written.
 #
-# The 3D viewer is built from the cut files by viewer.rs (Rust; repro-svg
+# The cut files and the SolidCraft designs are drawn by buzz_disc.rs; the
+# 3D viewer is built from the cut files by viewer.rs (Rust; repro-svg
 # builds it), which reads them with lasermade-tools' turn3d module, so it
 # expects that checkout beside this one.
 
-# --- the cut files: no command in this repository redraws them. They are
-# the source the previews and the viewer are built from. ---
-BuzzDisc1.svg :: !
-BuzzDisc2.svg :: !
+# --- the cut files, drawn by buzz_disc.rs from each disc's parameters (by
+# hand in Inkscape until 2026-11-08). The previews and the viewer are built
+# from them. ---
+BuzzDisc1.svg :: target/release/buzz_disc --disc=sawtooth-disc --out=$(dirname $OUT)
+BuzzDisc2.svg :: target/release/buzz_disc --disc=plain-bar --out=$(dirname $OUT)
 
 # --- the previews: display renderings of the cut files ---
 previews/BuzzDisc1.svg :: ../lasermade-tools/target/release/make-preview BuzzDisc1.svg $OUT
@@ -18,7 +20,15 @@ previews/BuzzDisc2.svg :: ../lasermade-tools/target/release/make-preview BuzzDis
 index.html :: ../lasermade-tools/target/release/md2html index.md $OUT
 buzz-disc-3d.html :: target/release/viewer --out=$OUT
 
-# --- the STEP files: the 3D view's parts as solids for a CAD program, one
-# file per design, written from the page by lasermade-tools' step-export ---
-step/buzz-disc-sawtooth-disc.step :: ../lasermade-tools/target/release/step-export buzz-disc-3d.html --name=buzz-disc --out=$(dirname $OUT)
-step/buzz-disc-plain-bar.step :: ../lasermade-tools/target/release/step-export buzz-disc-3d.html --name=buzz-disc --out=$(dirname $OUT)
+# --- the SolidCraft designs: each disc as a parametric solid, written by
+# buzz_disc.rs, and saved by SolidCraft with the build cache left out
+# (lasermade-tools' sc-slim) so the file is the same every time ---
+solidcraft/buzz-disc-sawtooth-disc.solidcraft.json :: target/release/buzz_disc --disc=sawtooth-disc --no-write --solidcraft=$(dirname $OUT)
+solidcraft/buzz-disc-plain-bar.solidcraft.json :: target/release/buzz_disc --disc=plain-bar --no-write --solidcraft=$(dirname $OUT)
+solidcraft/buzz-disc-sawtooth-disc.sc :: target/release/buzz_disc --disc=sawtooth-disc --no-write --solidcraft=$(dirname $OUT) && solidcraft-cli run $(dirname $OUT)/buzz-disc-sawtooth-disc.solidcraft.json --save $OUT --quiet && ../lasermade-tools/target/release/sc-slim $OUT
+solidcraft/buzz-disc-plain-bar.sc :: target/release/buzz_disc --disc=plain-bar --no-write --solidcraft=$(dirname $OUT) && solidcraft-cli run $(dirname $OUT)/buzz-disc-plain-bar.solidcraft.json --save $OUT --quiet && ../lasermade-tools/target/release/sc-slim $OUT
+
+# --- the STEP files, written by SolidCraft (solidcraft-cli, on PATH) from
+# those designs (by step-export from the 3D view until 2026-11-08) ---
+step/buzz-disc-sawtooth-disc.step :: target/release/buzz_disc --disc=sawtooth-disc --no-write --solidcraft=$(dirname $OUT) && solidcraft-cli run $(dirname $OUT)/buzz-disc-sawtooth-disc.solidcraft.json --out $OUT --quiet
+step/buzz-disc-plain-bar.step :: target/release/buzz_disc --disc=plain-bar --no-write --solidcraft=$(dirname $OUT) && solidcraft-cli run $(dirname $OUT)/buzz-disc-plain-bar.solidcraft.json --out $OUT --quiet

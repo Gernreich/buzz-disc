@@ -9,7 +9,7 @@
 > **This is a dangerous object. It can injure you, and it can injure anyone
 > near you.** Unlike a bullroarer this one spins close in — held between two
 > hands, roughly at chest height, with your face above it. The toothed disc is
-> at most about 41g in a single 3 mm thickness and 124g laminated three times,
+> about 38g in a single 3 mm thickness and 115g laminated three times,
 > and its rim is a ring of points turning at speed. It can also come off the
 > cord if a hole tears or a knot slips. Keep it clear of your face, check both
 > holes and the loop before each session, and read
@@ -26,7 +26,7 @@ into a buzz. Output is millimetre-true — `1 user unit = 1 mm` with a physical
 <td align="center"><a href="BuzzDisc2.svg"><img src="previews/BuzzDisc2.svg" alt="A plain rectangular buzz disc, 150 by 40 mm, with two cord holes at the centre" width="180"></a></td>
 </tr>
 <tr>
-<td align="center"><sub>Toothed disc · 160 × 161 mm</sub></td>
+<td align="center"><sub>Toothed disc · 159 × 160 mm</sub></td>
 <td align="center"><sub>Plain bar · 150 × 40 mm</sub></td>
 </tr>
 </table>
@@ -45,11 +45,12 @@ generator and tool, indexed.
 
 ## What is in each file
 
-Measured out of the files, not copied from whatever drew them:
+Drawn by `buzz_disc.rs` from each disc's parameters (by hand in Inkscape until
+2026-11-08; the toothed rim is regular since, see Changing it):
 
 | Design | Outline | Cord holes | Spacing |
 |---|---|---|---|
-| `BuzzDisc1.svg` | 160.5 × 160.7 mm, sawtooth rim | two, 5 mm | 30 mm apart |
+| `BuzzDisc1.svg` | 159.4 × 159.5 mm, 34 teeth | two, 5 mm | 30 mm apart |
 | `BuzzDisc2.svg` | 150.0 × 40.0 mm rectangle | two, 5 mm | 25 mm apart |
 
 In both, the holes straddle the centre and sit on the centreline — that symmetry is what
@@ -89,9 +90,8 @@ arrangement; length and thickness are yours to settle by trying.
 **This one spins close to you** — held between two hands at chest height, with your face
 above it — and the lamination advice above deliberately makes it heavier.
 
-- **Mass.** The toothed disc is at most about **41g** at one 3 mm thickness, **83g**
-  laminated twice, **124g** three times. (The teeth remove material, so those are upper
-  bounds.)
+- **Mass.** The toothed disc is about **38g** at one 3 mm thickness, **77g**
+  laminated twice, **115g** three times.
 - **Speed.** A wound cord releases fast, and the rim travels far quicker than the centre.
   The rim is where all the teeth are.
 - **Shape.** The toothed rim is the whole point of the design and a ring of points at
@@ -117,10 +117,11 @@ of material between a hole and the nearest edge — no margin worth worrying abo
 the glue line through the holes on a laminated disc matters more than the geometry does.
 `.github/workflows/check.yml` runs the same command on every push.
 
-`BuzzDisc1.svg` is the file that taught the gate two of its own bugs: its outline closes
-without a `z`, ends meeting to 0.00009 mm, and it starts at 3 o'clock — exactly the height
-of both cord holes, which is the degenerate case for a point-in-polygon test. The tool's
-README tells that story.
+The hand-drawn `BuzzDisc1.svg` (until 2026-11-08) taught the gate two of its own bugs:
+its outline closed without a `z`, ends meeting to 0.00009 mm, and it started at 3 o'clock —
+exactly the height of both cord holes, which is the degenerate case for a point-in-polygon
+test. The generated rim closes with a `z` but still starts there. The tool's README tells
+that story.
 
 ## Files
 
@@ -129,30 +130,96 @@ README tells that story.
 | `BuzzDisc1.svg` · `BuzzDisc2.svg` | the two cut-ready designs |
 | `previews/` | display renderings — **not** cut files |
 | `buzz-disc-3d.html` | the 3D view, assembled from the cut files — drag to turn |
+| `buzz_disc.rs` | draws both cut files and writes the SolidCraft designs from each disc's parameters (Changing it, below) |
+| `solidcraft/` · `step/` | the SolidCraft designs and the STEP files built from them |
 | `viewer.rs` | builds `buzz-disc-3d.html` from the cut files, with the turn3d module in lasermade-tools: `cargo build --release`, then `target/release/viewer` |
-| `Cargo.toml` · `Cargo.lock` | the Rust package for `viewer.rs`; it expects the lasermade-tools checkout beside this one |
+| `Cargo.toml` · `Cargo.lock` | the Rust package for `buzz_disc.rs` and `viewer.rs`; it expects the lasermade-tools checkout beside this one |
 | `.repro` | how every shipped drawing and page is reproduced |
 | `index.md` · `index.html` | the published page; the markdown is the source |
 | `.github/workflows/check.yml` | runs the pre-cut gate on every push |
 
 Released under [CC0 1.0](LICENSE).
 
-## STEP files
+## Changing it
 
-`step/` holds the 3D view as STEP files, one per design, to open or import in a
-CAD program such as SolidCraft, Fusion or FreeCAD: one solid body per part, in
-millimetres, assembled as the view shows it. Every face is flat, so a curve comes
-in as short straight runs; engraving has no depth and is left out. They are written
-from `buzz-disc-3d.html` by lasermade-tools' `step-export`, and `.repro` checks them:
+Each disc is a few numbers, and each is a flag on `buzz_disc.rs` (with `--disc=NAME`,
+since each has its own; a dash for each underscore) and a parameter of the same name in
+that disc's SolidCraft design:
 
 ```
-../lasermade-tools/target/release/step-export buzz-disc-3d.html --name=buzz-disc
+cargo build --release
+target/release/buzz_disc --disc=sawtooth-disc --teeth=28 --no-write
 ```
+
+Without `--disc` it redraws both at their defaults. Each run prints the part's size and
+mass a lamination, and a validation block: the cord holes either side of the centre, at
+least 3 mm of ply between and around them, the outline, and the bed. `--out=DIR` writes
+elsewhere; `--no-write` only checks.
+
+**The toothed rim is regular since 2026-11-08.** The drawn rim was a polar wave: going
+round, the radius rises linearly with the angle up a flank, holds at the tip along an arc
+about the centre, and falls down the next flank, with no flat at the root. But it was
+drawn by hand: 34 teeth whose tips and roots wandered ±0.6 mm round the turn, two tops
+split in two, and a short flat where the drawing closed. Now every tooth is the same,
+and the defaults are the drawn rim's averages: 34 teeth, tips 159.5 mm across, roots
+138.2 mm, each flank 22% of a tooth's pitch (2.33°) and the tip the rest (5.94°).
+In the cut file each flank is a cubic Bézier with the polar curve's own end tangents,
+within a micrometre of it, and each top an arc.
+
+**sawtooth-disc**
+
+| parameter | default | what it is |
+|---|---|---|
+| `ply` | 3 mm | the ply: one lamination |
+| `laminations` | 1 | discs glued face to face: the design's thickness is laminations × ply |
+| `teeth` | 34 | teeth round the rim |
+| `tip_d` | 159.5 mm | across the tips |
+| `root_d` | 138.2 mm | across the roots |
+| `flank` | 0.22 | each flank's share of a tooth's pitch; the tip has the rest |
+| `hole_d` | 5 mm | a cord hole |
+| `hole_gap` | 30 mm | cord hole centre to centre |
+
+**plain-bar**
+
+| parameter | default | what it is |
+|---|---|---|
+| `ply` | 3 mm | the ply: one lamination |
+| `laminations` | 1 | discs glued face to face: the design's thickness is laminations × ply |
+| `length` | 150 mm | the bar, end to end |
+| `width` | 40 mm | the bar, across |
+| `hole_d` | 5 mm | a cord hole |
+| `hole_gap` | 25 mm | cord hole centre to centre |
+
+## SolidCraft designs and STEP files
+
+`solidcraft/buzz-disc-NAME.solidcraft.json` is each disc as a parametric SolidCraft
+design, written by
+
+```
+target/release/buzz_disc --no-write --solidcraft=solidcraft
+```
+
+and SolidCraft builds each design file and STEP file from it:
+
+```
+cd solidcraft
+solidcraft-cli run buzz-disc-sawtooth-disc.solidcraft.json --save buzz-disc-sawtooth-disc.sc --out ../step/buzz-disc-sawtooth-disc.step --quiet
+../../lasermade-tools/target/release/sc-slim buzz-disc-sawtooth-disc.sc
+```
+
+Each is one body, `laminations` × `ply` thick. The toothed disc is the root disc with
+one tooth joined to it, its flanks drawn from their formula, patterned round `teeth`
+times, so the tooth count is a parameter like the rest. Built, each body's volume
+matches the exact area the generator works out to within 3e-5, and with five or six
+parameters moved at once (the disc at 28 teeth, 150 mm across, 30% flanks, two
+laminations) the design builds what the generator draws at those values. `.repro`
+checks all six files. The STEP files used to be written from the 3D view by
+`step-export`; since 2026-11-08 SolidCraft builds them.
 
 The files:
 
-- `step/buzz-disc-plain-bar.step`
-- `step/buzz-disc-sawtooth-disc.step`
+- `solidcraft/buzz-disc-sawtooth-disc.solidcraft.json` · `solidcraft/buzz-disc-sawtooth-disc.sc` · `step/buzz-disc-sawtooth-disc.step`
+- `solidcraft/buzz-disc-plain-bar.solidcraft.json` · `solidcraft/buzz-disc-plain-bar.sc` · `step/buzz-disc-plain-bar.step`
 
 ## Credits
 
